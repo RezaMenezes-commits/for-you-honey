@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Untukmu, dengan Segenap Hatiku</title>
+<title>FOR MY SAYANG SYAFIRA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,600&family=Caveat:wght@500&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 <section>
   <p class="hand" id="from"></p>
   <h1 id="name"></h1>
-  <p class="sub">Setiap detik bersamamu adalah bagian favoritku dari hari ini.</p>
+  <p class="sub">Setiap detik bersamamu adalah bagian favoritku dari hari-hari aku.</p>
   <div class="count" aria-label="Waktu kebersamaan kita">
     <div><b id="d">0</b><span>hari</span></div>
     <div><b id="h">0</b><span>jam</span></div>
@@ -84,21 +84,27 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 const C={
   name:"Sayangku",
   from:"Dari aku, dengan cinta",
-  start:"2024-02-14", // tanggal jadian: TAHUN-BULAN-TANGGAL
+  start:"2026-07-26", // tanggal jadian: TAHUN-BULAN-TANGGAL
   letter:[
     "Untuk kamu yang tersayang,",
     "Aku nggak tahu cara mengungkapkannya lewat kata-kata, jadi aku buatkan sudut kecil di internet ini untukmu.",
-    "Kamu membuat hari-hari biasa terasa lembut dan cerah. Tawamu adalah suara favoritku, dan genggaman tanganmu adalah tempat favoritku.",
+    "Kamu membuat hari-hari biasa aku menjadi sempurna. Tawamu adalah suara favoritku, dan genggaman tanganmu adalah tempat favoritku.",
+    "Maaf kalo belakangan ini aku suka bikin kamu emosi.",
+    "Kemarin aku udah bikin website juga untuk kamu, tapi kamu yang hilangin",
+    "Tapi gakpapa jujur ini lebih effort daripada yang kemarin, dan ini juga lebih capek hahaha",
     "Terima kasih sudah sabar menghadapiku, percaya padaku, dan menyayangiku di hari-hari ketika aku sulit menyayangi diriku sendiri.",
     "Apa pun yang terjadi nanti, aku ingin menghadapinya bersamamu."
+    
   ],
-  sign:"Milikmu, selalu",
+  sign:"Reza Milik Syafira, selalu",
   reasons:[
-    "Senyummu membuat semuanya hening sejenak.",
+    "Senyummu membuat hatiku senang.",
     "Kamu membuatku ingin jadi orang yang lebih baik.",
-    "Kamu adalah rumah, di mana pun kita berada.",
+    "Kamu adalah rumah, di mana pun aku berada.",
     "Kamu tertawa mendengar candaanku, bahkan yang garing.",
     "Kamu baik pada orang-orang yang bahkan tidak menyadarinya.",
+    "Kamu selalu memasakan makanan untukku",
+    "Dari kamu aku benar-benar tau apa itu cinta",
     "Karena bersamamu, aku bisa jadi diri sendiri."
   ],
   question:"Maukah kamu tetap di sisiku, selamanya?"
@@ -157,10 +163,10 @@ $("no").addEventListener("click",()=>{
   if(tries>=4){$("no").textContent="Oke… aku mau";$("no").onclick=()=>$("yes").click();return}
   $("no").style.left=(Math.random()*120-60)+"px";
   $("no").style.top=(Math.random()*60-30)+"px";
-  $("no").textContent=["Yakin?","Beneran?","Pikir lagi deh…"][tries-1];
+  $("no").textContent=["Yakin?","Beneran?","Pikir lagi deh yg pernah kita jalanin…""Mau Dipukul?"][tries-1];
 });
 $("yes").addEventListener("click",()=>{
-  $("yes-msg").textContent="Aku sudah tahu. Aku sayang banget sama kamu. 💗";
+  $("yes-msg").textContent="Aku sudah tahu nenek. Aku sayang banget sama kamu my lovely SYAFIRA DESIANA CINDRA KAISA. 💗";
   for(let i=0;i<40;i++)setTimeout(()=>heart(Math.random()*innerWidth,innerHeight*.8),i*60);
 });
 </script>
