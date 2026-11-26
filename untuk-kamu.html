@@ -37,6 +37,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .row{display:flex;gap:1rem;justify-content:center;align-items:center;flex-wrap:wrap;min-height:4.5rem;margin-top:1.5rem}
 #no{position:relative}
 #yes-msg{font-size:2rem;font-style:italic;color:var(--rose);margin-top:1.5rem;min-height:3rem}
+.lagu{width:min(100%,34rem);aspect-ratio:16/9;height:auto;border:0;border-radius:1rem;margin-top:.5rem}
 .h{position:fixed;pointer-events:none;z-index:5;color:var(--rose);animation:rise 4.5s ease-out forwards}
 @keyframes rise{from{opacity:.9;transform:translateY(0) scale(.6)}to{opacity:0;transform:translateY(-70vh) translateX(var(--dx)) scale(1.3)}}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -62,6 +63,8 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
   <h2>Aku menulis sesuatu untukmu</h2>
   <button class="env" id="env" aria-label="Buka surat">💌</button>
   <div class="letter" id="letter" aria-live="polite"></div>
+  <p class="hand" style="margin-top:2.5rem">Lagu untukmu</p>
+  <iframe class="lagu" src="https://music.youtube.com/watch?v=xn8npqs0XkY&si=mdM5OWIA1FAkcO8f&drli=1" title="Lagu Favorit kamu" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </section>
 
 <section>
@@ -94,7 +97,6 @@ const C={
     "Tapi gakpapa jujur ini lebih effort daripada yang kemarin, dan ini juga lebih capek hahaha",
     "Terima kasih sudah sabar menghadapiku, percaya padaku, dan menyayangiku di hari-hari ketika aku sulit menyayangi diriku sendiri.",
     "Apa pun yang terjadi nanti, aku ingin menghadapinya bersamamu."
-    
   ],
   sign:"Reza Milik Syafira, selalu",
   reasons:[
@@ -160,10 +162,10 @@ $("why").addEventListener("click",()=>{
 let tries=0;
 $("no").addEventListener("click",()=>{
   tries++;
-  if(tries>=4){$("no").textContent="Oke… aku mau";$("no").onclick=()=>$("yes").click();return}
+  if(tries>=5){$("no").textContent="Oke… aku mau";$("no").onclick=()=>$("yes").click();return}
   $("no").style.left=(Math.random()*120-60)+"px";
   $("no").style.top=(Math.random()*60-30)+"px";
-  $("no").textContent=["Yakin?","Beneran?","Pikir lagi deh yg pernah kita jalanin…""Mau Dipukul?"][tries-1];
+  $("no").textContent=["Yakin?","Beneran?","Pikir lagi deh yg pernah kita jalanin…","Mau Dipukul?"][tries-1];
 });
 $("yes").addEventListener("click",()=>{
   $("yes-msg").textContent="Aku sudah tahu nenek. Aku sayang banget sama kamu my lovely SYAFIRA DESIANA CINDRA KAISA. 💗";
